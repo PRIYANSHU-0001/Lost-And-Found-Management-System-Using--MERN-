@@ -1,0 +1,100 @@
+/* client/src/index.css */
+
+/* 1. CSS Reset (Better than browser defaults) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Global Variables (Theme Management) */
+:root {
+    /* Colors */
+    --color-primary: #4f46e5;       /* Indigo 600 (Main Action Color) */
+    --color-primary-dark: #4338ca;  /* Indigo 700 (Hover/Active) */
+    --color-success: #10b981;       /* Green 500 (Report/Success) */
+    --color-error: #ef4444;         /* Red 500 (Errors) */
+    --color-text-main: #1f2937;     /* Gray 900 */
+    --color-text-light: #6b7280;    /* Gray 500 */
+    --color-background: #f9fafb;    /* Gray 50 */
+    --color-white: #ffffff;
+
+    /* Spacing & Borders */
+    --spacing-md: 1rem;
+    --border-radius: 0.5rem;
+    --shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* 3. Base Body and Typography Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Use a clean, modern font */
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+/* 4. Utility Classes (General Purpose) */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-default);
+}
+
+/* client/src/index.css (Updated Global Variables) */
+
+/* ... (Existing CSS Reset and Base Styles) ... */
+
+/* 2. Global Variables (Theme Management Refinement) */
+:root {
+    /* Colors */
+    --color-primary: #5a55e2;       /* Deeper Indigo (Used for major actions, headers) */
+    --color-primary-dark: #4743c7;  /* Hover/Active */
+    --color-success: #10b981;       /* Green 500 (Positive actions) */
+    --color-error: #ef4444;         /* Red 500 (Errors) */
+    --color-text-main: #1f2937;     /* Darker text */
+    --color-text-light: #6b7280;    /* Gray for subtle text */
+    --color-background: #f4f6f9;    /* Lighter, softer background */
+    --color-white: #ffffff;
+    --color-light-bg: #fdfdff;      /* For cards/sections */
+
+    /* Spacing & Borders */
+    --spacing-md: 1rem;
+    --border-radius: 0.75rem;       /* Slightly larger radius for elegance */
+    /* Deeper, softer shadow for the 'Woww' factor */
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-header: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Base Body and Typography Styles */
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    line-height: 1.6; /* Slightly increased line height for readability */
+}
+
+/* ... (Existing .container and .flex-grow) ... */
+
+/* Update the shadow utility */
+.shadow-md {
+    box-shadow: var(--shadow-card);
+}
+
+/* Base style for all major pages/containers */
+.page-container {
+    background-color: var(--color-light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    padding: 2rem;
+    margin: 2rem 0;
+}

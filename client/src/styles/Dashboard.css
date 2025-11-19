@@ -1,0 +1,91 @@
+/* client/src/styles/Dashboard.css */
+
+.dashboard-layout {
+    padding: 0 0 2rem 0;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
+    text-align: center;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-default);
+}
+
+/* Filters and Search Input Styling */
+.filter-select, .filter-input {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.filter-input {
+    flex-grow: 2; /* Make search bar wider */
+}
+
+/* Item Grid Layout */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* No Items Message */
+.no-items-message {
+    grid-column: 1 / -1; /* Span across all columns */
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.error-message-text {
+    color: var(--color-error);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+    }
+}
+
+/* client/src/styles/Dashboard.css (Refinement) */
+
+.dashboard-layout {
+    /* Remove padding if App.jsx main adds it */
+}
+
+.dashboard-title {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-primary-dark);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem; /* More space */
+    padding: 1.5rem;
+    background-color: var(--color-light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card); /* Card shadow */
+}
+
+/* Item Grid and Cards naturally look better with the ItemCard.css update */

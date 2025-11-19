@@ -1,0 +1,174 @@
+/* client/src/styles/Home.css */
+
+/* --- General Styling for Woww Factor --- */
+.home-page {
+    padding-bottom: 4rem;
+}
+
+/* --- 1. Hero Section --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #e5e7eb; /* Light separator */
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.text-highlight {
+    color: var(--color-primary);
+}
+
+.text-light {
+    color: var(--color-text-main);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-hero {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary { /* Define a secondary style */
+    background-color: #f3f4f6; /* Light gray */
+    color: var(--color-text-main);
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+.icon-pulse {
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hero-image-placeholder {
+    width: 40%;
+    height: 300px;
+    background-color: #eef2ff; /* Light primary background */
+    border-radius: 1rem;
+    /* This is where you would place your actual image */
+    background-image: url('data:image/svg+xml,...'); 
+}
+
+/* --- 2. Features Section --- */
+.features-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-primary-dark);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    border-top: 3px solid var(--color-success);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    color: var(--color-text-light);
+}
+
+/* --- 3. Final CTA --- */
+.final-cta {
+    background-color: var(--color-primary-dark);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.final-cta h3 {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.btn-final-cta {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    .hero-image-placeholder {
+        width: 100%;
+    }
+    .hero-cta {
+        justify-content: center;
+    }
+    .feature-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

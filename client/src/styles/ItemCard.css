@@ -1,0 +1,186 @@
+/* client/src/styles/ItemCard.css */
+
+/* Card Container */
+.item-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-default);
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid #e5e7eb; /* Subtle border */
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Color Coding for Item Type */
+.item-card-lost {
+    border-top: 5px solid var(--color-error); /* Red/Lost */
+}
+.item-card-found {
+    border-top: 5px solid var(--color-success); /* Green/Found */
+}
+
+/* Header (Badges) */
+.item-card-header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.item-type-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+}
+.item-card-lost .item-type-badge {
+    background-color: var(--color-error);
+    color: var(--color-white);
+}
+.item-card-found .item-type-badge {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.item-status-badge {
+    color: var(--color-text-light);
+}
+
+/* Image */
+.item-card-image-container {
+    height: 150px;
+    overflow: hidden;
+}
+.item-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Body Content */
+.item-card-body {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.item-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.item-card-detail {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-top: 0.25rem;
+}
+
+.item-card-category {
+    font-style: italic;
+    color: var(--color-primary);
+}
+
+/* Footer (Button) */
+.item-card-footer {
+    padding: 1rem;
+    border-top: 1px dashed #e5e7eb;
+}
+
+.btn-detail {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #f3f4f6; /* Gray 100 */
+    color: var(--color-text-main);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+}
+
+.btn-detail:hover {
+    background-color: #e5e7eb; /* Gray 200 */
+}
+
+/* client/src/styles/ItemCard.css (Refinement) */
+
+.item-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-card {
+    background-color: var(--color-light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid #f3f4f6; /* Very light border */
+}
+
+.item-card:hover {
+    transform: translateY(-3px); /* Stronger lift effect */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); /* Deeper hover shadow */
+}
+
+/* Color Coding for Item Type (Stronger colors) */
+.item-card-lost {
+    border-top: 6px solid var(--color-error); 
+}
+.item-card-found {
+    border-top: 6px solid var(--color-success); 
+}
+
+/* Body and Footer Spacing */
+.item-card-body {
+    padding: 1.25rem;
+}
+
+.btn-detail {
+    /* Make the detail button a subtle primary action */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    opacity: 0.9;
+}
+
+.btn-detail:hover {
+    background-color: var(--color-primary-dark);
+    opacity: 1;
+}
+/* client/src/styles/ItemDetail.css (Additions) */
+
+.contact-details-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fffde7; /* Light yellow background for attention */
+    border: 1px solid #fce899;
+    border-radius: var(--border-radius);
+}
+
+.contact-details-box h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.contact-alert {
+    font-weight: 600;
+    color: var(--color-error);
+}
+
+.contact-link {
+    color: var(--color-success);
+    text-decoration: none;
+    font-weight: 600;
+}

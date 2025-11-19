@@ -1,0 +1,118 @@
+/* client/src/styles/AuthForm.css */
+
+.auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 0.3rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db; /* Gray 300 */
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); /* Primary focus ring */
+}
+
+.auth-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    /* Uses the btn-primary style defined in Navbar.css */
+}
+
+.auth-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    color: var(--color-primary);
+}
+
+/* client/src/styles/AuthForm.css (Add this at the bottom) */
+
+.error-message {
+    background-color: #fee2e2; /* Red 100 */
+    color: var(--color-error); /* Red 500 */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-error);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* client/src/styles/AuthForm.css (Add this style) */
+
+.success-message {
+    background-color: #d1fae5; /* Green 100 */
+    color: var(--color-success); /* Green 500 */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-success);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* client/src/styles/AuthForm.css (Refinement) */
+
+.auth-container {
+    max-width: 450px; /* Slightly wider */
+    margin: 4rem auto;
+    padding: 2.5rem; /* More padding */
+    background-color: var(--color-light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card); /* Woww shadow */
+}
+
+.auth-title {
+    font-size: 2rem; /* Larger title */
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    /* Inherit padding/radius from general styles */
+    border: 1px solid #e5e7eb; 
+}
+
+.form-input:focus {
+    /* Use primary color for focus ring */
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(90, 85, 226, 0.2); 
+}
